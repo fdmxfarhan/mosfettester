@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mosfet Tester</title>
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/photon.min.css"> -->
+    <!-- <script src="/js/jquery-3.5.1.min.js"></script> -->
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <script src="jquery/jquery-ui.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="sidebar-view">
+        <h1>Serial Props</h1>
+        <div class="label">Port:</div>
+        <select name="com-select" id="com-select">
+          <option value="COM1">COM1</option>
+          <option value="COM2">COM2</option>
+          <option value="COM3">COM3</option>
+          <option value="COM4">COM4</option>
+        </select>
+        
+        <div class="label">BoudRate:</div>
+        <select name="boudrate-select" id="boudrate-select">
+          <option value="115200">115200 (default)</option>
+          <option value="9600">9600</option>
+        </select>
+        
+        <div class="label">Data Bits:</div>
+        <select name="databits-select" id="databits-select">
+          <option value="8">8 (default)</option>
+          <option value="7">7</option>
+        </select>
+        
+        <div class="label">Parity:</div>
+        <select name="parity-select" id="parity-select">
+          <option value="None">None (default)</option>
+          <option value="Even">Even</option>
+          <option value="Odd">Odd</option>
+          <option value="Mark">Mark</option>
+          <option value="Space">Space</option>
+        </select>
+        
+        <div class="label">Stop Bits:</div>
+        <select name="stopbits-select" id="stopbits-select">
+          <option value="1">1 (default)</option>
+          <option value="2">2</option>
+        </select>
+        
+        <div class="connect-button" id="connect-button">Connect</div>
+      </div>
+      <div class="content-view">
+        log
+      </div>
+    </div>
+    <script>
+      require('./js/serial.js');
+    </script>
+  </body>
+</html>
