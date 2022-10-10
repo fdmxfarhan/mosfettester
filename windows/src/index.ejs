@@ -13,7 +13,8 @@
     <script src="jquery/jquery-ui.js"></script>
   </head>
   <body>
-    <div class="main-container">
+    <div class="black-modal"></div>
+    <div class="main-container" id="main-container">
       <div class="sidebar-view">
         <h1>Serial Props</h1>
         <div class="label">Port:</div>
@@ -52,10 +53,71 @@
         </select>
         
         <div class="connect-button" id="connect-button">Connect</div>
+        <div class="disconnect-button hidden" id="disconnect-button">Disconnect</div>
+        <div class="starttest-button disabled" id="starttest-button">Start testing</div>
       </div>
       <div class="content-view">
-        log
+        <div class="serial-number">
+          Serial Number: <div class="serial-num-value" id="serial-num-value">12345</div>
+          <div class="button" id="new-button">
+            New 
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
+        <table class="table-info">
+          <tr>
+            <th>Step 1</th>
+            <th>Step 2</th>
+            <th>Step 3</th>
+            <th>Step 4</th>
+            <th>Step 5</th>
+            <th>Step 6</th>
+          </tr>
+          <tr>
+            <td id="step-value-1">-</td>
+            <td id="step-value-2">-</td>
+            <td id="step-value-3">-</td>
+            <td id="step-value-4">-</td>
+            <td id="step-value-5">-</td>
+            <td id="step-value-6">-</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-check green" id="step-check-1"></i><i class="fa fa-times red" id="step-times-1"></i></td>
+            <td><i class="fa fa-check green" id="step-check-2"></i><i class="fa fa-times red" id="step-times-2"></i></td>
+            <td><i class="fa fa-check green" id="step-check-3"></i><i class="fa fa-times red" id="step-times-3"></i></td>
+            <td><i class="fa fa-check green" id="step-check-4"></i><i class="fa fa-times red" id="step-times-4"></i></td>
+            <td><i class="fa fa-check green" id="step-check-5"></i><i class="fa fa-times red" id="step-times-5"></i></td>
+            <td><i class="fa fa-check green" id="step-check-6"></i><i class="fa fa-times red" id="step-times-6"></i></td>
+          </tr>
+        </table>
+        <div class="date-time-view">
+          <div class="date">Date: <div class="date-value" id="date-value">1401/02/01</div></div>
+          <div class="time">Time: <div class="time-value" id="time-value">16:30</div></div>
+        </div>
+        <div class="test-result">
+          Test Result: <div class="test-result-value green" id="test-result-q">Qualified</div><div class="test-result-value red hidden" id="test-result-dq">Disqualified</div>
+        </div>
+        <div class="buttons-view">
+          <div class="button" id="save-button">
+            <i class="fa fa-save"></i>
+            Save Report
+          </div>
+          <div class="button" id="print-button">
+            <i class="fa fa-print"></i>
+            Print Label
+          </div>
+        </div>
       </div>
+      <div class="console-view">
+        <div class="progress-bar">
+          <div class="handle" id="progress-handle"></div>
+        </div>
+        <div class="console-text" id="console-text"></div>
+      </div>
+    </div>
+    <div class="file-print-frame hidden" id="file-print-frame">
+      <div class="print-label-num" id="print-label-num">ITD-FANDRIVE-P6L</div>
+      <div class="print-serial-num" id="print-serial-num">1000000001</div>
     </div>
     <script>
       require('./js/serial.js');

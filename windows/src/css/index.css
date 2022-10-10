@@ -35,9 +35,6 @@ body {
     text-align: left;
     background-color: var(--light-background);
 }
-.hidden{
-    display: none;
-}
 
 .success-msg{
     position: fixed;
@@ -143,6 +140,218 @@ body {
     cursor: pointer;
 }
 .main-container .sidebar-view .connect-button:hover{
+    background-color: green;
+}
+.main-container .sidebar-view .disconnect-button{
+    width: 80%;
+    margin: auto;
+    background-color: var(--red);
+    color: white;
+    padding: 0.5vw 0;
+    border-radius: 0.5vw;
+    margin-top: 2vw;
+    text-align: center;
+    font-family: 'iransans';
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+.main-container .sidebar-view .disconnect-button:hover{
+    background-color: red;
+}
+.main-container .sidebar-view .starttest-button{
+    width: 80%;
+    margin: auto;
+    background-color: var(--blue);
+    color: white;
+    padding: 0.5vw 0;
+    border-radius: 0.5vw;
+    margin-top: 1vw;
+    text-align: center;
+    font-family: 'iransans';
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+.main-container .sidebar-view .starttest-button:hover{
+    background-color: blue;
+}
+.main-container .sidebar-view .starttest-button.disabled{
+    cursor: pointer;
+    background-color: var(--gray);
+    cursor: not-allowed;
+}
+.main-container .sidebar-view .connect-button.disabled{
+    cursor: pointer;
+    background-color: var(--gray);
+    cursor: not-allowed;
+}
+.main-container .content-view .serial-number{
+    width: 90%;
+    margin: auto;
+    padding-top: 4vw;
+    color: var(--text);
+    font-family: 'iransans';
+    font-size: 1.2vw;
+    position: relative;
+}
+.main-container .content-view .serial-number .serial-num-value{
+    color: var(--darkblue);
+    font-weight: bold;
+    display: inline;
+    font-family: 'iransans';
+    font-size: 1.2vw;
+}
+.main-container .content-view .serial-number .button{
+    background-color: var(--blue);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: white;
+    padding: 0.3vw 1vw;
+    border-radius: 0.5vw;
+    font-family: 'iransans';
+    font-size: 1.1vw;
+    cursor: pointer;
+}
+.main-container .content-view .serial-number .button i{
+    font-size: 1vw;
+    padding-left: 1vw;
+}
+.main-container .content-view .serial-number .button:hover{
     background-color: var(--hover);
 }
+.main-container .content-view table.table-info{
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 2vw;
+    border-radius: 0.5vw;
+}
+.main-container .content-view table.table-info th,
+.main-container .content-view table.table-info td{
+    border: var(--lightgray) 0.1vw solid;
+    text-align: center;
+    color: var(--text);
+    padding: 0.3vw 1vw;
+}
+.main-container .content-view table.table-info td i.green{color: var(--green);}
+.main-container .content-view table.table-info td i.red{color: var(--red);}
+.main-container .content-view .date-time-view{
+    width: 90%;
+    margin: auto;
+    margin-top: 0.4vw;
+    overflow: hidden;
+}
+.main-container .content-view .date-time-view .date,
+.main-container .content-view .date-time-view .time{
+    float: left;
+    width: 50%;
+    font-family: 'iransans';
+    font-size: 1vw;
+    color: var(--text);
+}
+.main-container .content-view .date-time-view .date .date-value,
+.main-container .content-view .date-time-view .time .time-value{
+    display: inline;
+    font-family: 'iransans';
+    font-size: 1vw;
+    color: var(--dark);
+    font-weight: bold;
+}
+.main-container .content-view .test-result{
+    width: 90%;
+    margin: auto;
+    margin-top: 2vw;
+    color: var(--text);
+    font-family: 'iransans';
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+.main-container .content-view .test-result .test-result-value{
+    font-family: 'iransans';
+    font-size: 1.2vw;
+    font-weight: bold;
+    display: inline;
+}
+.main-container .content-view .test-result .test-result-value.green{color: var(--green);}
+.main-container .content-view .test-result .test-result-value.red{color: var(--red);}
+.main-container .content-view .buttons-view{
+    overflow: hidden;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+}
+.main-container .content-view .buttons-view .button{
+    margin-left: 5%;
+    background-color: var(--blue);
+    color: white;
+    padding: 0.3vw 2vw;
+    width: fit-content;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    margin-bottom: 1vw;
+    float: left;
+}
+.main-container .content-view .buttons-view .button:hover{
+    background-color: var(--hover);
+}
+.console-view{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+    background-color: var(--dark);
+    height: 16vh;
+    color: white;
+}
+.console-view .console-text{
+    height: 12vh;
+    padding: 1vw;
+    overflow-y: scroll;
+    font-family: 'iransans';
+    font-size: 1vw;
+    font-weight: normal;
+    white-space: pre;
+}
+.console-view .console-text::-webkit-scrollbar {width: 0.5vw;}
+.console-view .console-text::-webkit-scrollbar-track {background: var(--gray);}
+.console-view .console-text::-webkit-scrollbar-thumb {background: var(--dark);}
+.console-view .console-text::-webkit-scrollbar-thumb:hover{background: var(--blue);}
+.console-view .progress-bar{
+    width: 100%;
+    position: absolute;
+    top: -0.8vw;
+    height: 0.8vw;
+    background-color: var(--dark-background);
+    text-align: right;
+}
+.console-view .progress-bar .handle{
+    transition-duration: 500ms;
+    width: 0;
+    background-color: var(--blue);
+    height: 0.8vw;
+}
+.file-print-frame{
+    padding-left: 15px;
+    text-align: left;
+    padding-top: 8px;
+}
+.file-print-frame .print-serial-num{
+    font-family: 'iransans';
+    font-size: 10px;
+    line-height: 12px;
+    text-align: left;
+    white-space: pre;
+}
+.file-print-frame .print-label-num{
+    font-family: 'iransans';
+    font-size: 6.6px;
+    padding-left: 2px;
+    line-height: 6px;
+    text-align: left;
+    font-weight: bold;
+}
 
+
+
+.hidden{
+    display: none;
+}

@@ -1,8 +1,8 @@
 {
-  "name": "Mosfet Tester",
-  "productName": "Mosfet Tester",
+  "name": "MosfetTester",
+  "productName": "MosfetTester",
   "version": "1.0.0",
-  "description": "Mosfet Tester",
+  "description": "MosfetTester",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -26,7 +26,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "Mosfet Tester",
+            "name": "MosfetTester",
             "icon": "src/img/logo.ico"
           }
         },
