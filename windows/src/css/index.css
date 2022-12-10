@@ -43,7 +43,7 @@ body {
     width: 40%;
     background-color: var(--green);
     font-family: 'iransans';
-    font-size: 1.3vw;
+    font-size: 1vw;
     color: white;
     padding: 0.6vw 0;
     text-align: center;
@@ -59,7 +59,7 @@ body {
     width: 40%;
     background-color: var(--red);
     font-family: 'iransans';
-    font-size: 1.3vw;
+    font-size: 1vw;
     color: white;
     padding: 0.6vw 0;
     text-align: center;
@@ -89,17 +89,19 @@ body {
     float: right;
 }
 .main-container .sidebar-view{
+    float: right;
     width: 25%;
     margin: 2.5%;
     margin-left: 0;
+}
+.main-container .serial-settings-view{
     background-color: white;
     border-radius: 1vw;
-    float: right;
     padding-bottom: 2vw;
 }
-.main-container .sidebar-view h1{
+.main-container .serial-settings-view h1{
     font-family: 'iransans';
-    font-size: 1.4vw;
+    font-size: 0.9vw;
     color: var(--darkblue);
     text-align: center;
     margin: 0;
@@ -107,79 +109,78 @@ body {
     padding-top: 0.8vw;
     margin-bottom: 1vw;
 }
-.main-container .sidebar-view .label{
+.main-container .serial-settings-view .label{
     font-family: 'iransans';
-    font-size: 1.2vw;
+    font-size: 0.8vw;
     columns: var(--text);
     width: 80%;
     margin: auto;
 }
-.main-container .sidebar-view select{
+.main-container .serial-settings-view select{
     font-family: 'iransans';
-    font-size: 1.2vw;
+    font-size: 0.7vw;
     columns: var(--text);
     width: 80%;
     margin: auto;
     display: block;
-    margin-bottom: 1vw;
+    margin-bottom: 0.2vw;
     font-family: 'iransans';
-    font-size: 1.1vw;
-    border-radius: 0.5vw;
+    border-radius: 0.3vw;
 }
-.main-container .sidebar-view .connect-button{
+.main-container .serial-settings-view .connect-button{
     width: 80%;
     margin: auto;
     background-color: var(--green);
     color: white;
-    padding: 0.5vw 0;
+    padding: 0.3vw 0;
     border-radius: 0.5vw;
-    margin-top: 2vw;
+    margin-top: 0.7vw;
     text-align: center;
     font-family: 'iransans';
-    font-size: 1.2vw;
+    font-size: 0.8vw;
     cursor: pointer;
 }
-.main-container .sidebar-view .connect-button:hover{
+.main-container .serial-settings-view .connect-button:hover{
     background-color: green;
 }
-.main-container .sidebar-view .disconnect-button{
+.main-container .serial-settings-view .disconnect-button{
     width: 80%;
     margin: auto;
     background-color: var(--red);
     color: white;
-    padding: 0.5vw 0;
+    padding: 0.3vw 0;
     border-radius: 0.5vw;
-    margin-top: 2vw;
+    margin-top: 0.7vw;
     text-align: center;
     font-family: 'iransans';
-    font-size: 1.2vw;
+    font-size: 0.8vw;
     cursor: pointer;
 }
-.main-container .sidebar-view .disconnect-button:hover{
+.main-container .serial-settings-view .disconnect-button:hover{
     background-color: red;
 }
-.main-container .sidebar-view .starttest-button{
+.main-container .serial-settings-view .starttest-button{
     width: 80%;
     margin: auto;
     background-color: var(--blue);
     color: white;
-    padding: 0.5vw 0;
+    padding: 0.3vw 0;
     border-radius: 0.5vw;
-    margin-top: 1vw;
+    margin-top: 0.7vw;
     text-align: center;
     font-family: 'iransans';
-    font-size: 1.2vw;
+    font-size: 0.8vw;
     cursor: pointer;
 }
-.main-container .sidebar-view .starttest-button:hover{
+.main-container .serial-settings-view .starttest-button:hover{
     background-color: blue;
 }
-.main-container .sidebar-view .starttest-button.disabled{
+.main-container .serial-settings-view .starttest-button.disabled{
     cursor: pointer;
     background-color: var(--gray);
     cursor: not-allowed;
 }
-.main-container .sidebar-view .connect-button.disabled{
+.main-container .serial-settings-view .connect-button.disabled{
     cursor: pointer;
     background-color: var(--gray);
     cursor: not-allowed;
@@ -332,22 +333,210 @@ body {
 .file-print-frame{
     padding-left: 15px;
     text-align: left;
-    padding-top: 8px;
+    padding-top: 2px;
+    overflow: hidden;
+}
+.file-print-frame .print-label-frame{
+    float: left;
+    width: 75px;
 }
 .file-print-frame .print-serial-num{
     font-family: 'iransans';
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 6px;
+    line-height: 6.5px;
     text-align: left;
+    font-weight: bold;
     white-space: pre;
 }
 .file-print-frame .print-label-num{
     font-family: 'iransans';
-    font-size: 6.6px;
+    font-size: 6px;
     padding-left: 2px;
     line-height: 6px;
     text-align: left;
     font-weight: bold;
+    padding-bottom: 1px;
+}
+.file-print-frame .print-label-num2{
+    font-family: 'iransans';
+    font-size: 6px;
+    padding-left: 2px;
+    line-height: 6px;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 1px;
+}
+.components-data{
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+    margin-top: 2vw;
+}
+.components-data .label{
+    float: left;
+    width: fit-content;
+    font-family: 'iransans';
+    font-size: 1vw;
+    color: var(--darkblue);
+    padding-right: 1vw;
+    display: block;
+}
+.components-data input.component-input{
+    float: left;
+    width: fit-content;
+    font-family: 'iransans';
+    font-size: 0.7vw;
+    color: var(--darkblue);
+    margin-right: 0.1vw;
+    display: block;
+    background-color: white;
+    width: 3.8vw;
+    text-align: center;
+    border: var(--lightgray) 0.1vw solid;
+    padding: 0.3vw 0;
+}
+.view-database-button{
+    width: 80%;
+    margin: auto;
+    background-color: var(--blue);
+    color: white;
+    padding: 0.3vw 0;
+    border-radius: 0.5vw;
+    margin-top: 0.7vw;
+    text-align: center;
+    font-family: 'iransans';
+    font-size: 0.8vw;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+.view-database-button:hover{
+    background-color: blue;
+}
+table.database-table{
+    width: 100%;
+}
+.database-view{
+    position: absolute;
+    width: 90vw;
+    height: 80vh;
+    padding: 1vw;
+    top: 4.5vw;
+    right: 4.5vw;
+    background-color: white;
+    border-radius: 1vw;
+    overflow-y: scroll;
+    z-index: 11;
+}
+.database-view th{
+    text-align: center;
+    font-size: 1vw;
+    color: var(--darkblue);
+}
+.database-view td{
+    text-align: center;
+    font-size: 1.3vw;
+}
+.excel-button{
+    /* position: absolute;
+    bottom: -2vw;
+    left: 2vw; */
+    background-color: var(--blue);
+    color: white;
+    width: fit-content;
+    padding: 0.3vw 2vw;
+    border-radius: 0.5vw;
+    font-family: 'iransans';
+    font-size: 0.9vw;
+    cursor: pointer;
+}
+.excel-button:hover{
+    background-color: var(--green);
+}
+.excel-button i{
+    padding-right: 0.5vw;
+}
+.buttons-area{
+    overflow: hidden;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 1vw;
+}
+
+.main-container .sidebar-view .label-print-setting{
+    background-color: white;
+    margin-top: 1.5vw;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+.main-container .sidebar-view .label-print-setting .label-serialnum{
+    float: left;
+    background-color: var(--light-background);
+    font-family: 'iransans';
+    font-size: 0.7vw;
+    padding: 0.4vw 0;
+    margin: 1vw 0;
+    margin-left: 0.5vw;
+    border-radius: 0.5vw;
+    width: 19%;
+    text-align: center;
+    position: relative;
+    height: 1.1vw;
+}
+.main-container .sidebar-view .label-print-setting .print-labels-button{
+    float: left;
+    background-color: var(--blue);
+    font-family: 'iransans';
+    font-size: 1vw;
+    padding: 0.15vw 0.7vw;
+    margin: 1vw 0;
+    margin-left: 0.5vw;
+    border-radius: 0.5vw;
+    color: white;
+    cursor: pointer;
+}
+.main-container .sidebar-view .label-print-setting .print-labels-button:hover{
+    background-color: var(--hover);
+}
+.main-container .label-print-setting h1{
+    font-family: 'iransans';
+    font-size: 0.9vw;
+    color: var(--darkblue);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 0.8vw;
+    /* margin-bottom: 1vw; */
+}
+.main-container .label-print-setting .label-plus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 1.2vw;
+    padding-top: 0.4vw;
+    padding-bottom: 0.4vw;
+    background-color: rgba(0, 0, 0, 0.287);
+    border-radius: 0.5vw;
+    color: green;
+    cursor: pointer;
+    display: none;
+}
+.main-container .label-print-setting .label-times{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 1.2vw;
+    padding-top: 0.4vw;
+    padding-bottom: 0.4vw;
+    background-color: rgba(255, 255, 255, 0.523);
+    border-radius: 0.5vw;
+    color: red;
+    cursor: pointer;
+    display: none;
 }
 
 

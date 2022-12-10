@@ -131,6 +131,11 @@ function convertDate(date) {
     convertDateTime = convertDateTime[0] + "/" + convertDateTime[1] + "/" + convertDateTime[2];
     return convertDateTime;
 }
+function labelConvertDate(date) {
+    var convertDateTime = get_year_month_day(date);
+    convertDateTime = convertDateTime[0].toString() + convertDateTime[1].toString() + convertDateTime[2].toString();
+    return convertDateTime;
+}
 
 function convertDateObject(date) {
     var convertDateTime = gregorian_to_jalali(date.year, date.month, date.day);
@@ -281,4 +286,4 @@ var showPrice = (number) => {
     return(result.split("").reverse().join(""));
 }
 
-module.exports = {JalaliDate,j_days_in_month, day_in_week, div, jalali_to_gregorian, gregorian_to_jalali, get_year_month_day, get_hour_minute_second, convertDate, get_persian_month, showPrice, getNow, compareDates, convertDateObject, objToString, arrayToObj, convertTime};
+module.exports = {JalaliDate,j_days_in_month, day_in_week, div, jalali_to_gregorian, gregorian_to_jalali, get_year_month_day, get_hour_minute_second, convertDate, get_persian_month, showPrice, getNow, compareDates, convertDateObject, objToString, arrayToObj, convertTime, labelConvertDate};

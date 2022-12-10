@@ -1,6 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const ejse = require('ejs-electron')
+const { dialog } = require('electron')
 
 if (require('electron-squirrel-startup')) { 
   app.quit();
@@ -14,12 +15,12 @@ const createWindow = () => {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
+      enableRemoteModule: true,
     }
   });
 
   mainWindow.loadURL(path.join(path.join('file://', __dirname), 'index.ejs'));
   // mainWindow.maximize();
-  mainWindow.webContents.setZoomFactor(1.0);
   mainWindow.webContents
     .setVisualZoomLevelLimits(1, 5)
     .then(console.log("Zoom Levels Have been Set between 100% and 500%"))
@@ -39,3 +40,4 @@ app.on('activate', () => {
     createWindow();
   }
 });
+
